@@ -43,7 +43,7 @@
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
-                            <a href="{{ route('kategori.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
+                            <a href="{{ route('kategori.create') }}" class="btn btn-sm btn-primary">Tambah Data Ketegori</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
@@ -114,7 +114,7 @@
     @include('layouts.footer')
     <!-- Footer -->
 
-    {{-- @include('Kategori.modal.show') --}}
+    {{-- @include('kategori.modal.show') --}}
 
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">

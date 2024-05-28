@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\WisataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +26,10 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('kategori' , KategoriController::class);
+
+Route::resource('lokasi' , LokasiController::class);
+
+Route::resource('event' , EventController::class);
+
+Route::resource('wisata' , WisataController::class);
+

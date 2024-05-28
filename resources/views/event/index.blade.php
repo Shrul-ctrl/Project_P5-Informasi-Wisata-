@@ -29,36 +29,64 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Kategori</h1>
+                <h1 class="h3 mb-0 text-gray-800">event</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active" aria-current="page">Kategori</li>
+                    <li class="breadcrumb-item active" aria-current="page">event</li>
                 </ol>
             </div>
 
-        
-            <!--Row-->
-            <div class="card mb-3">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Tambah Data Kategori</h6>
-                </div>
-                <div class="card-body">
-                    <form action="{{ route('kategori.store') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                    <div class="form-group">
-                        <label class="form-label">Kategori</label>
-                        <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori">
-                    </div>
-                    
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <!-- Simple Tables -->
+                    <div class="card">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                            <a href="{{ route('event.create') }}" class="btn btn-sm btn-primary">Tambah Data event</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Nama event</th>
+                                        <th>Tanggal diselengarakan</th>
+                                        <th>Lokasi</th>
+                                        <th>status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @php $no = 1;
+                                    @endphp
+                                    @foreach ($event as $data)
+                                    <tr>
+                                        <td>{{ $no++ }}</td>
+                                        <td>{{ $data->nama_event }}</td>
+                                        <td>{{ $data->tanggal }}</td>
+                                        <td>{{ $data->lokasi->nama_lokasi }}</td>
+                                        <td>{{ $data->status}}</td>
 
-                    <div class="from-group">
-                        <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
-                        <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
+                                        <form action="{{ route('event.destroy', $data->id) }}" method="POST">
+                                          @csrf
+                                          @method('DELETE')
+
+                                        <td>
+                                            <a href="{{ route('event.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('event.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
+                                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                        </td>
+                                      </form>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer"></div>
                     </div>
-                    </form>
                 </div>
-              </div>
+            </div>
+            <!--Row-->
 
             <!-- Modal Logout -->
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
@@ -91,7 +119,7 @@
     @include('layouts.footer')
     <!-- Footer -->
 
-    {{-- @include('Kategori.modal.show') --}}
+    {{-- @include('event.modal.show') --}}
 
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">

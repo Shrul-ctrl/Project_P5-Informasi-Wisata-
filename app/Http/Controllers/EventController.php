@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kategori;
+use App\Models\Event;
+use App\Models\Lokasi;
 
-class KategoriController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::all();
-        return view('kategori.index', compact('kategori'));
+        $event = Event::all();
+        return view('event.index', compact('event'));
     }
 
     /**
@@ -25,9 +26,9 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        
-        $kategori = Kategori::all();
-        return view('kategori.create', compact('kategori'));
+        $lokasi = event::all();
+        $lokasi = Lokasi::all();
+        return view('event.create', compact('lokasi'));
     }
 
     /**
@@ -38,10 +39,13 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = new Kategori;
-        $kategori->kategori = $request->kategori;
-        $kategori->save();
-        return redirect()->route('kategori.index');
+        $event = new Event;
+        $event->nama_event = $request->nama_event;
+        $event->tanggal = $request->tanggal;
+        $event->id_lokasi = $request->id_lokasi;
+        $event->status = $request->status;
+        $event->save();
+        return redirect()->route('event.index');
     }
 
     /**
@@ -52,8 +56,8 @@ class KategoriController extends Controller
      */
     public function show($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('kategori.show', compact('kategori'));
+        $event = Event::findOrFail($id);
+        return view('event.show', compact('event'));
     }
 
     /**
@@ -64,8 +68,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('kategori.edit', compact('kategori'));
+        $event = Event::findOrFail($id);
+        return view('event.edit', compact('event'));
     }
 
     /**
@@ -77,10 +81,13 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $kategori = Kategori::findOrFail($id);
-        $kategori->kategori = $request->kategori;
-        $kategori->save();
-        return redirect()->route('kategori.index');
+        $event = Event::findOrFail($id);
+        $event->nama_event = $request->nama_event;
+        $event->tanggal = $request->tanggal;
+        $event->id_lokasi = $request->id_lokasi;
+        $event->status = $request->status;
+        $event->save();
+        return redirect()->route('event.index');
     }
 
     /**
@@ -91,9 +98,9 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::FindOrFail($id);
-        $kategori->delete();
-        return redirect()->route('kategori.index');
+        $event = Event::FindOrFail($id);
+        $event->delete();
+        return redirect()->route('event.index');
        
     }
 }

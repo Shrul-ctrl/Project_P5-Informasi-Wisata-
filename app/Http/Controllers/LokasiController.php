@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Kategori;
+use App\Models\lokasi;
 
-class KategoriController extends Controller
+class LokasiController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $kategori = Kategori::all();
-        return view('kategori.index', compact('kategori'));
+        $lokasi = lokasi::all();
+        return view('lokasi.index', compact('lokasi'));
     }
 
     /**
@@ -25,9 +25,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        
-        $kategori = Kategori::all();
-        return view('kategori.create', compact('kategori'));
+        $lokasi = lokasi::all();
+        return view('lokasi.create', compact('lokasi'));
     }
 
     /**
@@ -38,10 +37,13 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        $kategori = new Kategori;
-        $kategori->kategori = $request->kategori;
-        $kategori->save();
-        return redirect()->route('kategori.index');
+        $lokasi = new lokasi;
+        $lokasi->nama_lokasi = $request->nama_lokasi;
+        $lokasi->alamat_lengkap = $request->alamat_lengkap;
+        $lokasi->provinsi = $request->provinsi;
+        $lokasi->kabupaten = $request->kabupaten;
+        $lokasi->save();
+        return redirect()->route('lokasi.index');
     }
 
     /**
@@ -52,8 +54,8 @@ class KategoriController extends Controller
      */
     public function show($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('kategori.show', compact('kategori'));
+        $lokasi = lokasi::findOrFail($id);
+        return view('lokasi.show', compact('lokasi'));
     }
 
     /**
@@ -64,8 +66,8 @@ class KategoriController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Kategori::findOrFail($id);
-        return view('kategori.edit', compact('kategori'));
+        $lokasi = lokasi::findOrFail($id);
+        return view('lokasi.edit', compact('lokasi'));
     }
 
     /**
@@ -77,10 +79,13 @@ class KategoriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $kategori = Kategori::findOrFail($id);
-        $kategori->kategori = $request->kategori;
-        $kategori->save();
-        return redirect()->route('kategori.index');
+        $lokasi = lokasi::findOrFail($id);
+        $lokasi->nama_lokasi = $request->nama_lokasi;
+        $lokasi->alamat_lengkap = $request->alamat_lengkap;
+        $lokasi->provinsi = $request->provinsi;
+        $lokasi->kabupaten = $request->kabupaten;
+        $lokasi->save();
+        return redirect()->route('lokasi.index');
     }
 
     /**
@@ -91,9 +96,8 @@ class KategoriController extends Controller
      */
     public function destroy($id)
     {
-        $kategori = Kategori::FindOrFail($id);
-        $kategori->delete();
-        return redirect()->route('kategori.index');
-       
+        $lokasi = lokasi::FindOrFail($id);
+        $lokasi->delete();
+        return redirect()->route('lokasi.index');
     }
 }

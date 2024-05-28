@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="img/logo/logo.png" rel="icon">
+    <link href="{{ asset('img/logo/logo.png') }}" rel="icon">
     <title>WisataNusantara</title>
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -29,36 +29,55 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Kategori</h1>
+                <h1 class="h3 mb-0 text-gray-800">Event</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active" aria-current="page">Kategori</li>
+                    <li class="breadcrumb-item active" aria-current="page">Event</li>
                 </ol>
             </div>
 
-        
+
             <!--Row-->
             <div class="card mb-3">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Tambah Data Kategori</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Event</h6>
                 </div>
-                <div class="card-body">
-                    <form action="{{ route('kategori.store') }}" method="POST" enctype="multipart/form-data">
+                <div class="card-body m-0 font-weight-bold ">
+                    <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                    <div class="form-group">
-                        <label class="form-label">Kategori</label>
-                        <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori">
-                    </div>
-                    
+                        <div class="form-group">
+                            <label class="form-label">Nama Event</label>
+                            <input class="form-control  mb-3" type="text" name="nama_event" placeholder="Nama Event">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tanggal diselengarakan</label>
+                            <input class="form-control  mb-3" type="date" name="tanggal">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Tempat</label>
+                            <select class="form-control" name="id_lokasi">
+                                @foreach ($lokasi as $data)
+                                <option value="{{ $data->id }}">{{ $data->nama_lokasi }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Status</label>
+                            <select class="form-control mb-3" name="status" placeholder="Status">
+                                <option>Belum mulai </option>
+                                <option>Sedang terlaksanakan </option>
+                                <option>Telah selesai</option>
+                            </select>
+                        </div>
 
-                    <div class="from-group">
-                        <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
-                        <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
-                    </div>
+                        <div class="from-group">
+                            <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
+                            <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
+                        </div>
                     </form>
                 </div>
-              </div>
+            </div>
 
             <!-- Modal Logout -->
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
@@ -91,7 +110,7 @@
     @include('layouts.footer')
     <!-- Footer -->
 
-    {{-- @include('Kategori.modal.show') --}}
+    {{-- @include('event.modal.show') --}}
 
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">

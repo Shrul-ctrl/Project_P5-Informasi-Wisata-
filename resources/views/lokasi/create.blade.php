@@ -29,36 +29,46 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Kategori</h1>
+                <h1 class="h3 mb-0 text-gray-800">Lokasi</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active" aria-current="page">Kategori</li>
+                    <li class="breadcrumb-item active" aria-current="page">Lokasi</li>
                 </ol>
             </div>
 
-        
+
             <!--Row-->
             <div class="card mb-3">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Tambah Data Kategori</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Lokasi</h6>
                 </div>
-                <div class="card-body">
-                    <form action="{{ route('kategori.store') }}" method="POST" enctype="multipart/form-data">
+                <div class="card-body m-0 font-weight-bold ">
+                    <form action="{{ route('lokasi.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                    <div class="form-group">
-                        <label class="form-label">Kategori</label>
-                        <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori">
-                    </div>
-                    
-
-                    <div class="from-group">
-                        <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
-                        <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
-                    </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Lokasi</label>
+                            <input class="form-control  mb-3" type="text" name="nama_lokasi" placeholder="Nama Lokasi">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Alamat Lengkap</label>
+                            <input class="form-control  mb-3" type="text" name="alamat_lengkap" placeholder="Alamat Lengkap">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Provinsi</label>
+                            <input class="form-control  mb-3" type="text" name="provinsi" placeholder="Provinsi">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Kabupaten</label>
+                            <input class="form-control  mb-3" type="text" name="kabupaten" placeholder="Kabupaten">
+                        </div>
+                        <div class="from-group">
+                            <a href="{{ url('lokasi') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
+                            <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
+                        </div>
                     </form>
                 </div>
-              </div>
+            </div>
 
             <!-- Modal Logout -->
             <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">
@@ -91,7 +101,7 @@
     @include('layouts.footer')
     <!-- Footer -->
 
-    {{-- @include('Kategori.modal.show') --}}
+    {{-- @include('lokasi.modal.show') --}}
 
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">

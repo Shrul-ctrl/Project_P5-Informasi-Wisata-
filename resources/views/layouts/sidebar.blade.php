@@ -1,5 +1,5 @@
 <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('home') }}">
       <div class="sidebar-brand-icon">
         <img src="img/logo/logo2.png">
       </div>
@@ -16,19 +16,19 @@
       Interface
     </div>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="{{route('wisata.index')}}">
         <i class="fa-solid fa-plane-departure"></i>
         <span>Destinasi Wisata</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="{{route('lokasi.index')}}">
         <i class="fa-solid fa-location-dot"></i>
         <span>Lokasi</span>
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="{{route('event.index')}}">
         <i class="fa-regular fa-calendar-days"></i>
         <span>Event</span>
       </a>

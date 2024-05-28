@@ -34,7 +34,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="charts.html">
+      <a class="nav-link" href="{{route('kategori.index')}}">
         <i class="fa-solid fa-layer-group"></i>
         <span>Kategori</span>
       </a>

@@ -13,6 +13,10 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
     public function index()
     {
         $event = Event::all();
@@ -44,6 +48,16 @@ class EventController extends Controller
         $event->tanggal = $request->tanggal;
         $event->id_lokasi = $request->id_lokasi;
         $event->status = $request->status;
+        $event->foto = $request->foto;
+
+        // update img
+        if ($request->hasFile('foto')) {
+            $img = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img-> move('images/event', $name);
+            $event->foto = $name;
+        }
+
         $event->save();
         return redirect()->route('event.index');
     }
@@ -67,9 +81,10 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {  
         $event = Event::findOrFail($id);
-        return view('event.edit', compact('event'));
+        $lokasi = Lokasi::all();
+        return view('event.edit', compact('event','lokasi'));
     }
 
     /**
@@ -86,6 +101,16 @@ class EventController extends Controller
         $event->tanggal = $request->tanggal;
         $event->id_lokasi = $request->id_lokasi;
         $event->status = $request->status;
+        $event->foto = $request->foto;
+
+         // delete img
+         if ($request->hasFile('foto')) {
+            $img = $request->file('foto');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/event', $name);
+            $event->foto = $name;
+        }
+
         $event->save();
         return redirect()->route('event.index');
     }

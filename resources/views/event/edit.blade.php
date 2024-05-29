@@ -59,7 +59,11 @@
 
                         <div class="form-group">
                             <label class="form-label">Nama Tempat</label>
-                            <input class="form-control  mb-3" type="text" name="id_lokasi" value="{{ $event->lokasi->nama_lokasi }}">
+                            <select class="form-control" name="id_lokasi">
+                                @foreach ($lokasi as $data)
+                                <option value="{{ $data->id }}">{{ $data->nama_lokasi }}</option>
+                                @endforeach
+                            </select>
                         </div>
 
                         <div class="form-group">
@@ -67,8 +71,11 @@
                             <input class="form-control  mb-3" type="text" name="status" value="{{ $event->status }}">
                         </div>
 
-
-
+                        <div class="form-group">
+                            <label class="form-label">Foto</label>
+                            <img src="{{ asset('images/event/' . $event->foto) }}" width="300" alt="">
+                            <input type="file" class="form-control" name="foto">
+                        </div>
 
 
                         <div class="from-group">

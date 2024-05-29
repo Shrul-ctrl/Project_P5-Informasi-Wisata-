@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      *
@@ -13,13 +12,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('events', function (Blueprint $table) {
+        Schema::create('wisatas', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_event');
-            $table->date('tanggal');
-            $table->unsignedBigInteger('id_lokasi');
-            $table->string('status');
-            $table->string('foto');
+            $table->string('nama_wisata');
+            $table->string('id_kategori');
+            $table->string('id_lokasi');
+            $table->string('deskripsi');
+            $table->string('cover');
+            $table->string('id_event');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('events');
+        Schema::dropIfExists('wisatas');
     }
 };

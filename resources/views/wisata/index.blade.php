@@ -29,11 +29,11 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">event</h1>
+                <h1 class="h3 mb-0 text-gray-800">Wisata</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active" aria-current="page">event</li>
+                    <li class="breadcrumb-item active" aria-current="page">Wisata</li>
                 </ol>
             </div>
 
@@ -43,38 +43,46 @@
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                             <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
-                            <a href="{{ route('event.create') }}" class="btn btn-sm btn-primary">Tambah Data event</a>
+                            <a href="{{ route('wisata.create') }}" class="btn btn-sm btn-primary">Tambah Data Wisata</a>
                         </div>
                         <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama event</th>
-                                        <th>Tanggal diselengarakan</th>
+                                        <th>Nama Objek Wisata</th>
+                                        <th>Kategori</th>
                                         <th>Lokasi</th>
-                                        <th>status</th>
+                                        <th>Deskripsi</th>
+                                        <th>Cover</th>
+                                        <th>Event</th>
                                         <th>Aksi</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @php $no = 1;
                                     @endphp
-                                    @foreach ($event as $data)
+                                    @foreach ($wisata as $data)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $data->nama_event }}</td>
-                                        <td>{{ $data->tanggal }}</td>
+                                        <td>{{ $data->nama_wisata }}</td>
+                                        <td>{{ $data->kategori->kategori }}</td>
                                         <td>{{ $data->lokasi->nama_lokasi }}</td>
-                                        <td>{{ $data->status}}</td>
+                                        <td>{{ $data->deskripsi}}</td>
+                                        <td>
+                                            <img src="{{ asset('images/wisata/' . $data->cover) }}" width="100" alt="">
+                                        </td>
+                                        <td>{{ $data->event->nama_event}}</td>
 
-                                        <form action="{{ route('event.destroy', $data->id) }}" method="POST">
+
+                                        <form action="{{ route('wisata.destroy', $data->id) }}" method="POST">
                                           @csrf
                                           @method('DELETE')
 
                                         <td>
-                                            <a href="{{ route('event.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-                                            <a href="{{ route('event.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
+                                            <a href="{{ route('wisata.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            <a href="{{ route('wisata.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
                                             <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                       </form>
@@ -120,7 +128,7 @@
     @include('layouts.footer')
     <!-- Footer -->
 
-    {{-- @include('event.modal.show') --}}
+    {{-- @include('wisata.modal.show') --}}
 
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">

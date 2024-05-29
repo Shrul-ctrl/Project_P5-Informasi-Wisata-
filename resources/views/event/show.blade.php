@@ -65,6 +65,11 @@
                             <input class="form-control  mb-3" type="text" name="status" value="{{ $event->status }}" disabled>
                         </div>
 
+                        <div class="form-group">
+                            <label class="form-label">Foto</label>
+                            <img class="" name="foto"src="{{ asset('images/event/' . $event->foto) }}" width="300" alt="">    
+                        </div>
+
                         <div class="from-group">
                             <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Back</a>
                         </div>

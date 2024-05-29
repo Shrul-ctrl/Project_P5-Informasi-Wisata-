@@ -54,6 +54,7 @@
                                         <th>Alamat Lengkap</th>
                                         <th>Provinsi</th>
                                         <th>Kabupaten</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

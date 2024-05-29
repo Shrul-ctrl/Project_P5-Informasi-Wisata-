@@ -13,6 +13,10 @@ class Lokasi extends Model
     
     public function event()
     {
-        return $this->hasMany(E_COMPILE_ERRORvent::class);
+        return $this->hasMany(Event::class);
+    }
+    public function wisata()
+    {
+        return $this->hasMany(Wisata::class);
     }
 }

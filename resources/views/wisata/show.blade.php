@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="{{ asset('img/logo/logo.png') }}" rel="icon">
+    <link href="img/logo/logo.png" rel="icon">
     <title>WisataNusantara</title>
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -41,44 +41,42 @@
             <!--Row-->
             <div class="card mb-3">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-primary">Tambah Data Event</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Ubah Data Event</h6>
                 </div>
-                <div class="card-body m-0 font-weight-bold ">
-                    <form action="{{ route('event.store') }}" method="POST" enctype="multipart/form-data">
-                        @csrf
+                <div class="card-body">
+                    <form action="" method="POST">
+                       
                         <div class="form-group">
-                            <label class="form-label">Nama Event</label>
-                            <input class="form-control  mb-3" type="text" name="nama_event" placeholder="Nama Event">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Tanggal diselengarakan</label>
-                            <input class="form-control  mb-3" type="date" name="tanggal">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Nama Tempat</label>
-                            <select class="form-control" name="id_lokasi">
-                                @foreach ($lokasi as $data)
-                                <option value="{{ $data->id }}">{{ $data->nama_lokasi }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Status</label>
-                            <select class="form-control mb-3" name="status" placeholder="Status">
-                                <option>Belum mulai </option>
-                                <option>Sedang terlaksanakan </option>
-                                <option>Telah selesai</option>
-                            </select>
+                            <label class="form-label">Nama Objek Wisata</label>
+                            <input class="form-control  mb-3" type="text" name="nama_wisata" value="{{ $wisata->nama_wisata }}" disabled>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Foto</label>
-                            <input type="file" class="form-control" name="foto">
+                            <label class="form-label">Kategori</label>
+                            <input class="form-control  mb-3" type="text" name="id_kategori" value="{{ $wisata->kategori->kategori }}" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Lokasi</label>
+                            <input class="form-control  mb-3" type="text" name="id_lokasi" value="{{ $wisata->lokasi->nama_lokasi }}" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Deskripsi</label>
+                            <input class="form-control  mb-3" type="text" name="deskripsi" value="{{ $wisata->deskripsi }}" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Cover</label>
+                            <img class="" name="cover"src="{{ asset('images/wisata/' . $wisata->cover) }}" width="300" alt="">    
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Event</label>
+                            <input class="form-control  mb-3" type="text" name="id_event" value="{{ $wisata->event->nama_event }}" disabled>
                         </div>
 
                         <div class="from-group">
-                            <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
-                            <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
+                            <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Back</a>
                         </div>
                     </form>
                 </div>

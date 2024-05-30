@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="img/logo/logo.png" rel="icon">
+    <link href="{{ asset('img/logo/logo.png')}}" rel="icon">
     <title>WisataNusantara</title>
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="from-group">
-                        <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
+                        <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Kembali</a>
                         <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
                     </div>
                     </form>
@@ -74,7 +74,7 @@
                             <p>Are you sure you want to logout?</p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-outline-primary" data-dismiss="modal">back</button>
                             <a href="login.html" class="btn btn-primary">Logout</a>
                         </div>
                     </div>

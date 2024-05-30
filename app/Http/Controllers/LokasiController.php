@@ -47,7 +47,7 @@ class LokasiController extends Controller
         $lokasi->provinsi = $request->provinsi;
         $lokasi->kabupaten = $request->kabupaten;
         $lokasi->save();
-        return redirect()->route('lokasi.index');
+        return redirect()->route('lokasi.index')->with('success','Data berhasil ditambahkan');
     }
 
     /**
@@ -89,7 +89,7 @@ class LokasiController extends Controller
         $lokasi->provinsi = $request->provinsi;
         $lokasi->kabupaten = $request->kabupaten;
         $lokasi->save();
-        return redirect()->route('lokasi.index');
+        return redirect()->route('lokasi.index')->with('success','Data berhasil diubah');
     }
 
     /**
@@ -102,6 +102,6 @@ class LokasiController extends Controller
     {
         $lokasi = lokasi::FindOrFail($id);
         $lokasi->delete();
-        return redirect()->route('lokasi.index');
+        return redirect()->route('lokasi.index')->with('success','Data berhasil dihapus');
     }
 }

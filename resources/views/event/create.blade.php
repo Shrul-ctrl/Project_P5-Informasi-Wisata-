@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="from-group">
-                            <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>
+                            <a href="{{ url('event') }}" class="btn btn-sm btn-outline-secondary">Kembali</a>
                             <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
                         </div>
                     </form>

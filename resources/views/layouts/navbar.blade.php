@@ -35,7 +35,7 @@
                             Profile
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();
+                        <a href="{{ route('login') }}" class="dropdown-item" onclick="event.preventDefault();
                              document.getElementById('logout.form').submit();"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>{{_('Logout') }}</a>
                         <form id="logout.form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf

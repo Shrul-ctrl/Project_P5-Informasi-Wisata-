@@ -59,7 +59,7 @@ class EventController extends Controller
         }
 
         $event->save();
-        return redirect()->route('event.index');
+        return redirect()->route('event.index')->with('success', 'Data berhasil ditambah');
     }
 
     /**
@@ -112,7 +112,7 @@ class EventController extends Controller
         }
 
         $event->save();
-        return redirect()->route('event.index');
+        return redirect()->route('event.index')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -125,7 +125,7 @@ class EventController extends Controller
     {
         $event = Event::FindOrFail($id);
         $event->delete();
-        return redirect()->route('event.index');
+        return redirect()->route('event.index')->with('success', 'Data berhasil dihapus');
        
     }
 }

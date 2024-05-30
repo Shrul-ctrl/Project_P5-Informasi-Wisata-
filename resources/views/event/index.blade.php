@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="img/logo/logo.png" rel="icon">
+    <link href="{{ asset('img/logo/logo.png') }}" rel="icon">
     <title>WisataNusantara</title>
     <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -29,6 +29,11 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
                 <h1 class="h3 mb-0 text-gray-800">event</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -42,7 +47,7 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tables</h6>
                             <a href="{{ route('event.create') }}" class="btn btn-sm btn-primary">Tambah Data event</a>
                         </div>
                         <div class="table-responsive">
@@ -52,8 +57,9 @@
                                         <th>No</th>
                                         <th>Nama event</th>
                                         <th>Tanggal diselengarakan</th>
-                                        <th>Lokasi</th>
+                                        <th>Nama Tempat</th>
                                         <th>status</th>
+                                        <th>Gambar</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -67,6 +73,10 @@
                                         <td>{{ $data->tanggal }}</td>
                                         <td>{{ $data->lokasi->nama_lokasi }}</td>
                                         <td>{{ $data->status}}</td>
+                                        <td>
+                                            <img src="{{ asset('images/event/' . $data->foto) }}" width="100"
+                                                alt="">
+                                        </td>
 
                                         <form action="{{ route('event.destroy', $data->id) }}" method="POST">
                                           @csrf
@@ -75,7 +85,7 @@
                                         <td>
                                             <a href="{{ route('event.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                             <a href="{{ route('event.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
-                                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                            <button type="submit" class="btn btn-sm btn-danger " onclick="return confirm('Apakah anda yakin??')"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                       </form>
                                     </tr>

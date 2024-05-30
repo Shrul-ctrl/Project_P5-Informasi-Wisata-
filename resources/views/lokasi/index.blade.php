@@ -29,6 +29,11 @@
         <!---Content-->
         <div class="container-fluid" id="container-wrapper">
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                @if (session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+            @endif
                 <h1 class="h3 mb-0 text-gray-800">Lokasi</h1>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
@@ -42,7 +47,7 @@
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Tables</h6>
                             <a href="{{ route('lokasi.create') }}" class="btn btn-sm btn-primary">Tambah Data Lokasi</a>
                         </div>
                         <div class="table-responsive">
@@ -75,7 +80,7 @@
                                         <td>
                                             <a href="{{ route('lokasi.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                             <a href="{{ route('lokasi.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
-                                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin??')"><i class="fa-solid fa-trash"></i></button>
                                         </td>
                                       </form>
                                     </tr>

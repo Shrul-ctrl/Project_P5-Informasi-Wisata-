@@ -68,7 +68,7 @@ class WisataController extends Controller
             $wisata->cover = $name;
         }
         $wisata->save();
-        return redirect()->route('wisata.index');
+        return redirect()->route('wisata.index')->with('success', 'Data berhasil ditambah');
     }
 
     /**
@@ -125,7 +125,7 @@ class WisataController extends Controller
         }
 
         $wisata->save();
-        return redirect()->route('wisata.index');
+        return redirect()->route('wisata.index')->with('success', 'Data berhasil diubah');
     }
 
     /**
@@ -138,6 +138,6 @@ class WisataController extends Controller
     {
         $wisata = wisata::FindOrFail($id);
         $wisata->delete();
-        return redirect()->route('wisata.index');
+        return redirect()->route('wisata.index')->with('success', 'Data berhasil dihapus');
     }
 }

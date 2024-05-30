@@ -38,11 +38,16 @@
             </div>
 
             <div class="row">
-                <div class="col-lg-12 mb-4">
+                <div class="col-lg-12 mb-4" >
                     <!-- Simple Tables -->
                     <div class="card">
                         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                            <h6 class="m-0 font-weight-bold text-primary">Simple Tables</h6>
+                            @if (session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                            <h6 class="m-0 font-weight-bold text-primary">Tables</h6>
                             <a href="{{ route('wisata.create') }}" class="btn btn-sm btn-primary">Tambah Data Wisata</a>
                         </div>
                         <div class="table-responsive">
@@ -50,13 +55,14 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th>No</th>
-                                        <th>Nama Objek Wisata</th>
+                                        <th>Wisata</th>
                                         <th>Kategori</th>
                                         <th>Lokasi</th>
                                         <th>Deskripsi</th>
                                         <th>Cover</th>
                                         <th>Event</th>
                                         <th>Aksi</th>
+
 
                                     </tr>
                                 </thead>
@@ -69,7 +75,7 @@
                                         <td>{{ $data->nama_wisata }}</td>
                                         <td>{{ $data->kategori->kategori }}</td>
                                         <td>{{ $data->lokasi->nama_lokasi }}</td>
-                                        <td>{{ $data->deskripsi}}</td>
+                                        <td class="col">{{ $data->deskripsi}}</td>
                                         <td>
                                             <img src="{{ asset('images/wisata/' . $data->cover) }}" width="100" alt="">
                                         </td>
@@ -80,10 +86,12 @@
                                           @csrf
                                           @method('DELETE')
 
-                                        <td>
+                                        <td class="row">
+                                            <div class="row p-1">
                                             <a href="{{ route('wisata.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                             <a href="{{ route('wisata.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
-                                            <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin??')"><i class="fa-solid fa-trash"></i></button>
+                                        </div>
                                         </td>
                                       </form>
                                     </tr>

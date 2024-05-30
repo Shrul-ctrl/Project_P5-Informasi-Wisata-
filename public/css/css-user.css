@@ -1,0 +1,116 @@
+
+    .content-1 img {
+        width: 210vh;
+        height: 100vh;
+        object-fit: cover;
+        filter: brightness(0.6);
+    }
+
+    .font h1 {
+        font-size: 120px;
+        position: relative;
+        top: 4rem;
+        margin-bottom: -45px;
+    }
+
+    .font h2 {
+        font-size: 100px;
+        position: relative;
+        top: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .font p{
+        font-size: 20px;
+    }
+
+    .font a {
+        position: relative;
+        top: 8rem;
+    }
+
+    .font hr {
+        position: relative;
+        top: 13rem;
+    }
+
+    .content-2 {
+        margin-top: 100px;
+    }
+
+    .content-2 h1 {
+        position: relative;
+        left: -110px;
+
+    }
+
+    .content-2 h2 {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .content-row span {
+        position: relative;
+        left: -110px;
+        font-size: 32px;
+
+    }
+
+    .content-row h6 {
+        position: relative;
+        left: -110px;
+        font-size: 13px;
+    }
+
+    .content-2 a {
+        margin-top: 80px;
+        margin-left: 3rem;
+    }
+
+    .content-img .rounded1 {
+        height: 300px;
+        width: 200px;
+        object-fit: cover;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .content-img .rounded2 {
+        height: 250px;
+        width: 200px;
+        object-fit: cover;
+        position: absolute;
+        top: 48rem;
+        right: 20rem;
+        z-index: 2;
+    }
+
+    .content-img .rounded3 {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+        position: absolute;
+        position: absolute;
+        top: 50rem;
+        right: 13rem;
+        z-index: 1;
+    }
+
+    .clearfix {
+        margin-top: 200px;
+    }
+
+    .clearfix img {
+        width: 40rem;
+        padding-right: 30px;
+    }
+
+    .content-4 {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    footer{
+        margin-top: 50px;
+    }
+

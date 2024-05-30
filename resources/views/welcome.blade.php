@@ -6,113 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css-user.css">
 </head>
-<style>
-    .content-1 img {
-        width: 210vh;
-        height: 100vh;
-        object-fit: cover;
-        filter: brightness(0.6);
-    }
-
-    .font h1 {
-        font-size: 120px;
-        position: relative;
-        top: 4rem;
-        margin-bottom: -45px;
-    }
-
-    .font a {
-        position: relative;
-        top: 8rem;
-    }
-
-    .font hr {
-        position: relative;
-        top: 13rem;
-    }
-
-    .content-2 {
-        margin-top: 100px;
-    }
-
-    .content-2 h1 {
-        position: relative;
-        left: -110px;
-
-    }
-
-    .content-2 h2 {
-        position: relative;
-        margin-bottom: 30px;
-    }
-
-    .content-row span {
-        position: relative;
-        left: -110px;
-        font-size: 32px;
-
-    }
-
-    .content-row h6 {
-        position: relative;
-        left: -110px;
-        font-size: 13px;
-    }
-
-    .content-2 a {
-        margin-top: 80px;
-        margin-left: 3rem;
-    }
-
-    .content-img .rounded1 {
-        height: 300px;
-        width: 200px;
-        object-fit: cover;
-        position: absolute;
-        z-index: 3;
-    }
-
-    .content-img .rounded2 {
-        height: 250px;
-        width: 200px;
-        object-fit: cover;
-        position: absolute;
-        top: 48rem;
-        right: 20rem;
-        z-index: 2;
-    }
-
-    .content-img .rounded3 {
-        height: 200px;
-        width: 200px;
-        object-fit: cover;
-        position: absolute;
-        position: absolute;
-        top: 50rem;
-        right: 13rem;
-        z-index: 1;
-    }
-
-    .clearfix {
-        margin-top: 200px;
-    }
-
-    .clearfix img {
-        width: 40rem;
-        padding-right: 30px;
-    }
-
-    .content-4 {
-        margin-top: 100px;
-        margin-bottom: 100px;
-    }
-
-</style>
 <body>
-
-
-
     {{-- navbar --}}
 
 
@@ -130,6 +26,9 @@
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url('\viewevent') }}">Wisata</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Event</a>
@@ -237,7 +136,6 @@
                         <img src="img/gunung.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                         </div>
                         <div class="card-body row">
                             <div class="col-sm-8 text-secondary">Tiket Masuk</div>
@@ -253,7 +151,10 @@
                         <img src="img/gunung.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-body row">
+                            <div class="col-sm-8 text-secondary">Tiket Masuk</div>
+                            <div class="col-sm-3 text-secondary"><a href="" class="btn-outline-dark" >Detail</a></div>
                         </div>
                         <div class="card-footer">
                             <small class="text-body-secondary">Last updated 3 mins ago</small>
@@ -265,7 +166,10 @@
                         <img src="img/gunung.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                        <div class="card-body row">
+                            <div class="col-sm-8 text-secondary">Tiket Masuk</div>
+                            <div class="col-sm-3 text-secondary"><a href="" class="btn-outline-dark" >Detail</a></div>
                         </div>
                         <div class="card-footer">
                             <small class="text-body-secondary">Last updated 3 mins ago</small>

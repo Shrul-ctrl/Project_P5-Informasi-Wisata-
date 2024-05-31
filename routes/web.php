@@ -4,6 +4,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\WisataController;
+use App\Http\Controllers\WisatasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('events', function () {
+    return view('events');
+});
+
+Route::get('wisatas',[WisatasController::class,'menampilkan'] );
+
+Route::get('abouts', function () {
+    return view('abouts');
+});
 
 Auth::routes();
 

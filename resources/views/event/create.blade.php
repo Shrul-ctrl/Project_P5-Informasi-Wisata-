@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="{{ asset('img/logo/logo.png') }}" rel="icon">
-    <title>WisataNusantara</title>
-    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/ruang-admin.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('fontawesome-free-6.3.0-web/css/all.min.css') }}" rel="stylesheet">
-</head>
-
-<body id="page-top">
+@extends('layouts.app')
     <div id="wrapper">
         <!-- Sidebar -->
         @include('layouts.sidebar')
@@ -33,7 +16,8 @@
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                     <li class="breadcrumb-item">Tables</li>
-                    <li class="breadcrumb-item active" aria-current="page">Event</li>
+                    <li class="breadcrumb-item">Event</li>
+                    <li class="breadcrumb-item active" aria-current="page">Tambah Data Event</li>
                 </ol>
             </div>
 
@@ -48,11 +32,11 @@
                         @csrf
                         <div class="form-group">
                             <label class="form-label">Nama Event</label>
-                            <input class="form-control  mb-3" type="text" name="nama_event" placeholder="Nama Event">
+                            <input class="form-control  mb-3" type="text" name="nama_event" placeholder="Nama Event" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Tanggal diselengarakan</label>
-                            <input class="form-control  mb-3" type="date" name="tanggal">
+                            <input class="form-control  mb-3" type="date" name="tanggal" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Nama Tempat</label>
@@ -73,7 +57,7 @@
 
                         <div class="form-group">
                             <label class="form-label">Foto</label>
-                            <input type="file" class="form-control" name="foto">
+                            <input type="file" class="form-control" name="foto" required>
                         </div>
 
                         <div class="from-group">
@@ -120,14 +104,4 @@
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
-    </a>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/ruang-admin.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
-</body>
-
-</html>
+    </a> 

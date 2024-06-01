@@ -17,7 +17,7 @@ return new class extends Migration {
             $table->string('nama_wisata');
             $table->string('id_kategori');
             $table->string('id_lokasi');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->string('cover');
             $table->string('id_event');
             $table->timestamps();

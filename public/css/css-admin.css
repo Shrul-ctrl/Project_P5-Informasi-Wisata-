@@ -1,0 +1,16 @@
+    .table-1 {
+        width: 150rem;
+    }
+
+    .long {
+        width: 10rem;
+    }
+
+    .long-1 {
+        width: 18rem;
+    }
+
+    .dropdown-1 .dropdown-menu {
+        padding: 2px;
+        padding-top: 10px;
+    }

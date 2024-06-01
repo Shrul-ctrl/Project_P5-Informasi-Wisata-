@@ -1,6 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed">
-    <div class="container">
+    <div class="container">         
         <a class="navbar-brand" href="#"><span class="text-danger"> Wisata</span> Nusantara</a>
+        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -11,9 +12,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/wisatas')}}">Wisata</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{url('/events')}}">Event</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url('/abouts')}}">Tentang Kami</a>

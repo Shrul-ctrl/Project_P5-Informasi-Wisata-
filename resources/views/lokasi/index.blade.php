@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="img/logo/logo.png" rel="icon">
-    <title>WisataNusantara</title>
-    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ asset('css/ruang-admin.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('fontawesome-free-6.3.0-web/css/all.min.css') }}" rel="stylesheet">
-</head>
-
-<body id="page-top">
+@extends('layouts.app')
     <div id="wrapper">
         <!-- Sidebar -->
         @include('layouts.sidebar')
@@ -54,12 +37,13 @@
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr>
+                                        <th>Aksi</th>
                                         <th>No</th>
                                         <th>Nama Lokasi</th>
                                         <th>Alamat Lengkap</th>
                                         <th>Provinsi</th>
                                         <th>Kabupaten</th>
-                                        <th>Aksi</th>
+                                        
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -67,6 +51,31 @@
                                     @endphp
                                     @foreach ($lokasi as $data)
                                     <tr>
+                                        <form action="{{ route('lokasi.destroy', $data->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <td class="dropdown nav-item no-arrow">
+    
+                                                <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    <i class="fa-solid fa-list-ul"></i>
+                                                </a>
+                                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                                                    <a class="dropdown-item" href="{{ route('lokasi.edit', $data->id) }}">
+                                                        <i class="fa-solid fa-pen-to-square "></i> Edit
+                                                    </a>
+    
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="{{ route('lokasi.show', $data->id) }}" class="btn btn-sm btn-primary">
+                                                        <i class="fa-solid fa-eye "></i> Lihat
+                                                    </a>
+    
+                                                    <div class="dropdown-divider"></div>
+                                                    <button type="submit" class="dropdown-item" onclick="return confirm('Apakah anda yakin??')">
+                                                        <i class="fa-solid fa-trash "></i> Hapus
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </form>
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama_lokasi }}</td>
                                         <td>{{ $data->alamat_lengkap }}</td>
@@ -77,11 +86,7 @@
                                           @csrf
                                           @method('DELETE')
 
-                                        <td>
-                                            <a href="{{ route('lokasi.edit', $data->id) }}" class="btn btn-sm btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-                                            <a href="{{ route('lokasi.show', $data->id) }}" class="btn btn-sm btn-primary"><i class="fa-solid fa-eye"></i></a>
-                                            <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin??')"><i class="fa-solid fa-trash"></i></button>
-                                        </td>
+                                       
                                       </form>
                                     </tr>
                                     @endforeach
@@ -130,14 +135,4 @@
     <!-- Scroll to top -->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
-    </a>
-
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="js/ruang-admin.min.js"></script>
-    <script src="vendor/chart.js/Chart.min.js"></script>
-    <script src="js/demo/chart-area-demo.js"></script>
-</body>
-
-</html>
+    </a> 

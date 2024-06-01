@@ -33,13 +33,9 @@ class WisataController extends Controller
     public function create()
     {
 
-        $event = wisata::all();
+
         $event = event::all();
-
-        $lokasi = wisata::all();
         $lokasi = lokasi::all();
-
-        $kategori = wisata::all();
         $kategori = kategori::all();
         return view('wisata.create', compact('kategori','lokasi','event'));
     }

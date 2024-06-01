@@ -10,13 +10,20 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+    <link rel="dns-prefetch" href="{{asset('fonts.bunny.net')}}">
+    <link href="{{asset('https://fonts.bunny.net/css?family=Nunito')}}" rel="stylesheet">
+    <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/ruang-admin.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('fontawesome-free-6.3.0-web/css/all.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/css-admin.css')}}">
+
+    
 
   
 </head>
-<body>
-    <div id="app">
+<body id="page-top">
+    {{-- <div id="app"> --}}
         {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -71,9 +78,16 @@
             </div>
         </nav> --}}
 
-        <main class="py-4">
+        {{-- <main class="py-4">
             @yield('content')
         </main>
-    </div>
+    </div> --}}
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+</body>
 </body>
 </html>

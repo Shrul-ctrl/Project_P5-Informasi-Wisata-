@@ -42,11 +42,11 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TOTAL ADMIN YANG TERDAFTAR</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">TOTAL ADMIN:</div>
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL WISATA</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('wisata.index')}}">LIHAT TABEL</a></div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fas fa-user fa-2x text-primary"></i>
+                                    <i class="fas fa-user fa-2x text-info"></i>
                                 </div>
                             </div>
                         </div>
@@ -58,11 +58,43 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">DESTINASI WISATA</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800">WISATA:</div>
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL EVENT</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('event.index')}}">LIHAT TABEL</a></div>
                                 </div>
                                 <div class="col-auto">
-                                    <i class="fa-2x fa-solid fa-plane-departure text-success"></i>
+                                    <i class="fa-regular fa-calendar-days fa-2x fa-solid text-secondary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL KATEGORI</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('kategori.index')}}">LIHAT TABEL</a></div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa-soild fa-layer-group fa-2x fa-solid text-warning"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL LOKASI</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('lokasi.index')}}">LIHAT TABEL</a></div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fa-solid fa-location-dot fa-2x fa-solid text-success"></i>
                                 </div>
                             </div>
                         </div>

@@ -9,11 +9,13 @@ class WelcomeController extends Controller
 {
     public function menampilkan(){
         $welcome = Wisata::all();
-   return view('welcome', compact('welcome'));
+        return view('welcome',compact('welcome'));
     }
 
-    public function show($id){
-        $welcome = Wisata::findOrFail($id);
-        return view('welcome', compact('welcome'));    
-    }
+    // public function show($id){
+    //     $welcome = Wisata::findOrFail($id);
+    //     return view('welcome', compact('welcome'));    
+    // }
+    
+
 }

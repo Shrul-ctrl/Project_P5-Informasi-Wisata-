@@ -1,12 +1,10 @@
-<footer class="sticky-footer bg-dark text-light">
+
+<footer class=" bg-dark">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>copyright &copy; <script>
-                    document.write(new Date().getFullYear());
-
-                </script> - developed by
-                <b><a href="" target="_blank">Faiz</a></b>
-            </span>
+            <p>copyright &copy; - developed by
+                <b><a href="">Faiz</a></b>
+            </p>
         </div>
     </div>
 </footer>

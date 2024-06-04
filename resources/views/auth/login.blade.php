@@ -15,7 +15,7 @@
     </style>
 </head>
 
-<body class="h-screen font-sans login bg-cover">
+<body class="h-screen font-sans login bg-cover">    
   
     <div class="container mx-auto h-full flex flex-1 justify-center items-center">
         <div class="w-full max-w-lg">
@@ -44,9 +44,9 @@
 
                     {{-- password --}}
                     <div class="mt-2">
-                        <label class="block text-sm text-gray-600" for="password">{{ __('Password') }}</label>
+                        <label class="block text-sm text-gray-00" for="password">{{ __('Password') }}</label>
                         <div class="col-md-6">
-                            <input class="w-full px-5  py-1 text-gray-700 bg-gray-200 rounded" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <input class="w-full px-5 py-1 text-dark-700 bg-gray-200 rounded" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                             @error('password')
                             <span class="invalid-feedback" role="alert">
@@ -61,7 +61,7 @@
                     <div class="row mb-0">
                         <div class="mt-4 items-center justify-between">
                             <button class="px-4 py-1 text-white font-light tracking-wider bg-gray-900 rounded" type="submit">{{ __('Login') }}</button>
-
+{{-- 
                             @if (Route::has('password.request'))
                             <a class="btn btn-link font-bold" href="{{ route('password.request') }}">
                                 {{ __('Forgot Your Password?') }}
@@ -72,7 +72,7 @@
                                 <div class="nav-item">
                                     <a class="nav-link right- align-baseline font-bold text-sm text-800 hover:text-blue-800" href="{{ route('register') }}">{{ __('Register Now') }}</a>
                                 </div>
-                            @endif
+                            @endif --}}
 
                         </div>
                     </div>

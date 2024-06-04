@@ -50,13 +50,35 @@
                 lainnya serta pemandangan kota-kota yang indah di seluruh negeri. Dan ketika Anda memutuskan untuk
                 melihat semuanya, kunjungan saja tidak akan cukup untuk menikmati keajaiban Indonesia.</p>
             <hr class="border-dark border-2 ">
-            <h1 class="b">Jelajahi Berbagai Wisata diIndonesia</h1>
+            <h1 class="b">Jelajahi Berbagai Wisata diIndonesia sesuai kategori</h1>
+        
+     
+            
+      
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+               @foreach ($kategori as $data )
+            <div class="col">
+                <div class="card h-100">
+                    <div class="img-hover-zoom">
+                        <a href="{{ url('wisatas/sumatera/show' , $data->id) }}">
+                            <img src="{{ asset('images/kategori/' . $data->gambar) }}" alt=""
+                                class="card-img-top" alt="...">
+                        </a>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{$data->kategori}}</h5>
+                    </div>
+                </div>
+            </div>
+             @endforeach
         </div>
+     
+        {{-- <h1 class="b">Jelajahi Berbagai Wisata diIndonesia sesuai provinsi</h1>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/jawa') }}">
+                        <a href="{{ url('wisatas/jawa') }}">
                             <img src="images/java.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -68,7 +90,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/bali') }}">
+                        <a href="{{ url('wisatas/bali') }}">
                             <img src="images/bali.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -80,7 +102,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/maluku') }}">
+                        <a href="{{ url('wisatas/maluku') }}">
                             <img src="images/maluku.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -92,7 +114,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/kalimantan') }}">
+                        <a href="{{ url('wisatas/kalimantan') }}">
                             <img src="images/kalimantan.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -104,7 +126,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/sulawesi') }}">
+                        <a href="{{ url('wisatas/sulawesi') }}">
                             <img src="images/Sulawesi.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -116,7 +138,7 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('/sumatera') }}">
+                        <a href="{{ url('wisatas/sumatera') }}">
                             <img src="images/Sumatera.jpg" alt="" class="card-img-top" alt="...">
                         </a>
                     </div>
@@ -125,9 +147,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
-
+</div>
     {{-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             <li class="page-item disabled">

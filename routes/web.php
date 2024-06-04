@@ -7,6 +7,7 @@ use App\Http\Controllers\KalimantanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LokasiController;
 use App\Http\Controllers\MalukuController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SulawesiController;
 use App\Http\Controllers\SumateraController;
 use App\Http\Controllers\WelcomeController;
@@ -31,24 +32,25 @@ Route::get('',[WelcomeController::class,'menampilkan'] );
 // Route::get('/{id}',[WelcomeController::class,'show']);
 
 Route::get('wisatas',[WisatasController::class,'menampilkan'] );
+// Route::get('kategori/{id}',[WisatasController::class,'show'] );
 
-Route::get('jawa',[JawaController::class,'menampilkan'] );
-Route::get('show/{id}',[JawaController::class,'show'] );
+// Route::get('wisatas/jawa',[JawaController::class,'menampilkan'] );
+// Route::get('wisatas/jawa/show/{id}',[JawaController::class,'show'] );
 
-Route::get('bali',[BaliController::class,'menampilkan'] );
-Route::get('show/{id}',[BaliController::class,'show'] );
+// Route::get('wisatas/bali',[BaliController::class,'menampilkan'] );
+// Route::get('wisatas/bali/show/{id}',[BaliController::class,'show'] );
 
-Route::get('maluku',[MalukuController::class,'menampilkan'] );
-Route::get('show/{id}',[MalukuController::class,'show'] ); 
+// Route::get('wisatas/maluku',[MalukuController::class,'menampilkan'] );
+// Route::get('wisatas/maluku/show/{id}',[MalukuController::class,'show'] ); 
 
-Route::get('sulawesi',[SulawesiController::class,'menampilkan'] );
-Route::get('show/{id}',[SulawesiController::class,'show'] );
+// Route::get('wisatas/sulawesi',[SulawesiController::class,'menampilkan'] );
+// Route::get('wisatas/sulawesi/show/{id}',[SulawesiController::class,'show'] );
 
-Route::get('sumatera',[SumateraController::class,'menampilkan'] );
-Route::get('show/{id}',[SumateraController::class,'show'] );
+// Route::get('wisatas/sumatera',[SumateraController::class,'menampilkan'] );
+// Route::get('wisatas/sumatera/show/{id}',[SumateraController::class,'show'] );
 
-Route::get('kalimantan',[KalimantanController::class,'menampilkan'] );
-Route::get('show/{id}',[KalimantanController::class,'show'] );
+// Route::get('wisatas/kalimantan',[KalimantanController::class,'menampilkan'] );
+// Route::get('wisatas/kalimantan/show/{id}',[KalimantanController::class,'show'] );
 
 
 Route::get('abouts', function () {
@@ -66,4 +68,6 @@ Route::resource('event' , EventController::class);
 Route::resource('lokasi' , LokasiController::class);
 
 Route::resource('wisata' , WisataController::class);
+
+Route::resource('profile' , ProfileController::class);
 

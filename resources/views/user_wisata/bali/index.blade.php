@@ -1,6 +1,6 @@
 @extends('user_leyouts.app')
 <div class="content-1 card text-bg-dark">
-    <img src="images/header-bali-nusa-tenggara.avif" class="card-img" alt="...">
+    <img src="{{asset('images/header-bali-nusa-tenggara.avif')}}" class="card-img" alt="...">
     <div class="card-img-overlay">
         <div class="container">
             @include('user_leyouts.navbar')
@@ -49,7 +49,7 @@
                 <div class="col">
                     <div class="card h-100">
                         <div class="img-hover-zoom">
-                            <a href="{{ url('/show') }}">
+                            <a href="{{ url('wisatas/bali/show' , $data->id) }}">
                                 <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
                                     class="card-img-top" alt="...">
                             </a>

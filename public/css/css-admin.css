@@ -14,3 +14,13 @@
         padding: 2px;
         padding-top: 10px;
     }
+
+    .profile{
+        width: 400px;
+    }
+
+    .profile img{
+        position: relative;
+        left: 150px;
+        max-width: 100px;
+    }

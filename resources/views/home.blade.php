@@ -39,68 +39,85 @@
                 <!-- Earnings (Monthly) Card Example -->
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL WISATA</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('wisata.index')}}">LIHAT TABEL</a></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fas fa-user fa-2x text-info"></i>
-                                </div>
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL WISATA</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('wisata.index')}}">LIHAT TABEL</a></div>
+                            <div class="mt-2 mb-0 text-muted text-x">
+                              <span class="text-success mr-2"> Jumlah tabel:</span>
+                              <span>{{$wisata}}</span>
                             </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-user fa-2x text-info"></i>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
 
-                <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL EVENT</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('event.index')}}">LIHAT TABEL</a></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fa-regular fa-calendar-days fa-2x fa-solid text-secondary"></i>
-                                </div>
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL EVENT</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('event.index')}}">LIHAT TABEL</a></div>
+                            <div class="mt-2 mb-0 text-muted text-x">
+                              <span class="text-success mr-2"> Jumlah tabel:</span>
+                              <span>{{$event}}</span>
                             </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fa-regular fa-calendar-days fa-2x fa-solid text-secondary"></i>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
 
-                <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL KATEGORI</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('kategori.index')}}">LIHAT TABEL</a></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fa-soild fa-layer-group fa-2x fa-solid text-warning"></i>
-                                </div>
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL KATEGORI</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('kategori.index')}}">LIHAT TABEL</a></div>
+                            <div class="mt-2 mb-0 text-muted text-x">
+                              <span class="text-success mr-2"> Jumlah tabel:</span>
+                              <span>{{$kategori}}</span>
                             </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fa-soild fa-layer-group fa-2x fa-solid text-warning"></i>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
+                  </div>
 
-                <div class="col-xl-3 col-md-6 mb-4">
+                  <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card h-100">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col mr-2">
-                                    <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL LOKASI</div>
-                                    <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('lokasi.index')}}">LIHAT TABEL</a></div>
-                                </div>
-                                <div class="col-auto">
-                                    <i class="fa-solid fa-location-dot fa-2x fa-solid text-success"></i>
-                                </div>
+                      <div class="card-body">
+                        <div class="row align-items-center">
+                          <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-uppercase mb-1">TABEL LOKASI</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><a href="{{route('lokasi.index')}}">LIHAT TABEL</a></div>
+                            <div class="mt-2 mb-0 text-muted text-x">
+                              <span class="text-success mr-2"> Jumlah tabel:</span>
+                              <span>{{$lokasi}}</span>
                             </div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fa-solid fa-location-dot fa-2x fa-solid text-success"></i>
+                          </div>
                         </div>
+                      </div>
                     </div>
-                </div>
-            
+                  </div>
+
+
 
 
                 <!-- Modal Logout -->

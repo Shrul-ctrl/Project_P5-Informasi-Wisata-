@@ -33,6 +33,10 @@
                         <label class="form-label">Kategori</label>
                         <input class="form-control  mb-3" type="text" name="kategori" value="{{ $kategori->kategori }}" disabled>
                     </div>
+                    <div class="form-group">
+                        <label class="form-label">Cover</label>
+                        <img class="" name="cover"src="{{ asset('images/wisata/' . $wisata->cover) }}" width="300" alt="">    
+                    </div>
 
                     <div class="from-group">
                         <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Back</a>

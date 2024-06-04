@@ -29,10 +29,20 @@
 
 
 <div class="container">
+    <div class="content-5">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>
+            <li class="breadcrumb-item">Wisata</li>
+            {{-- <li class="breadcrumb-item active" aria-current="page">Kategori</li> --}}
+        </ol>
+    </div>
     <div class="content-2">
+        
         <section class="ftco-section services-section">
             <div class="container">
                 <div class="row d-flex">
+                    
                     <div class="col-md-6 order-md-last heading-section pl-md-4 d-flex align-items-center">
                         <div class="w-100">
                             

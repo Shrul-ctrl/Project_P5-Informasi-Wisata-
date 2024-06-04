@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Kategori extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'kategori'];
+    protected $fillable = ['id', 'kategori' ,'gambar'];
     public $timestamps = true;
 
     public function wisata()

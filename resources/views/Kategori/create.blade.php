@@ -34,12 +34,17 @@
                         <label class="form-label">Kategori</label>
                         <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori">
                     </div>
-                    
+                     <div class="form-group">
+                        <label class="form-label">Gambar</label>
+                        <input type="file" class="form-control" name="gambar">
+                    </div>
 
                     <div class="from-group">
                         <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Kembali</a>
                         <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>
                     </div>
+
+                   
                     </form>
                 </div>
               </div>

@@ -40,6 +40,7 @@
                                         <th>Aksi</th>
                                         <th>No</th>
                                         <th>Kategori</th>
+                                        <th>Gambar</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -74,6 +75,9 @@
                                         </form>
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->kategori }}</td>
+                                        <td>
+                                            <img src="{{ asset('images/kategori/' . $data->gambar) }}" width="100" alt="">
+                                        </td>
 
                                         <form action="{{ route('kategori.destroy', $data->id) }}" method="POST">
                                           @csrf

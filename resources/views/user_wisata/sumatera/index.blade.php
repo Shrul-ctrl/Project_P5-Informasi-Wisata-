@@ -1,6 +1,6 @@
 @extends('user_leyouts.app')
 <div class="content-1 card text-bg-dark">
-    <img src="images/banner-sumatera-3.avif" class="card-img" alt="...">
+    <img src="{{asset('images/banner-sumatera-3.avif')}}" class="card-img" alt="...">
     <div class="card-img-overlay">
 
         <div class="container">
@@ -40,14 +40,14 @@
             <p>Sumatra memberi Anda paket tantangan alam yang lengkap, mulai dari kawasan pegunungan Ngarai Sianok hingga pemandangan alam Bintan yang menakjubkan.
                 .</p>
             <hr class="border-dark border-2 ">
-            <h1 class="b">Telusuri Wisata diSumatera</h1>
+            <h1 class="b">Telusuri Wisata di Sumatera</h1>
         </div>
         <div class="row row-cols-1 row-cols-md-5 g-4">
             @foreach ($sumatera as $data)
                 <div class="col">
                     <div class="card h-100">
                         <div class="img-hover-zoom">
-                            <a href="{{ url('/show') }}">
+                            <a href="{{ url('wisatas/sumatera/show' , $data->id) }}">
                                 <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
                                     class="card-img-top" alt="...">
                             </a>

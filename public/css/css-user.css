@@ -129,6 +129,14 @@
     margin-bottom: 50px;
 }
 
+.content-5{
+    margin-top: 30px;
+}
+
+.breadcrumb{
+    background-color: white;
+}
+
 footer {
     margin-top:6rem;
     color: white;

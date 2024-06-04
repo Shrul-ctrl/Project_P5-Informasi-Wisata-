@@ -44,7 +44,19 @@ class KategoriController extends Controller
     {
         $kategori = new Kategori;
         $kategori->kategori = $request->kategori;
+        $kategori->gambar = $request->gambar;
+        
+        if ($request->hasFile('gambar')) {
+            $img = $request->file('gambar');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img-> move('images/kategori', $name);
+            $kategori->gambar = $name;
+        }
         $kategori->save();
+
+        
+         // update img
+         
         return redirect()->route('kategori.index')->with('success', 'Data berhasil ditambah');
     }
 
@@ -83,6 +95,16 @@ class KategoriController extends Controller
     {
         $kategori = Kategori::findOrFail($id);
         $kategori->kategori = $request->kategori;
+        $kategori->gambar = $request->gambar;
+
+          // delete img
+          if ($request->hasFile('gambar')) {
+            $img = $request->file('gambar');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/kategori', $name);
+            $kategori->gambar = $name;
+        }
+
         $kategori->save();
         return redirect()->route('kategori.index')->with('success', 'Data berhasil diubah');
     }

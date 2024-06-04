@@ -36,6 +36,12 @@
                         <input class="form-control  mb-3" type="text" name="kategori" value="{{ $kategori->kategori }}">
                     </div>
 
+                    <div class="form-group">
+                        <label class="form-label">Gambar</label>
+                        <img src="{{ asset('images/kategori/' . $kategori->gambar) }}" width="300" alt="">
+                        <input type="file" class="form-control" name="gambar">
+                    </div>
+
                     <div class="from-group">
                         <a href="{{ url('kategori') }}" class="btn btn-sm btn-outline-secondary">Kembali</a>
                         <button type="sumbit" class="btn btn-sm btn-success">Simpan</button>

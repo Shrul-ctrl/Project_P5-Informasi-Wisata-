@@ -1,6 +1,6 @@
 @extends('user_leyouts.app')
 <div class="content-1 card text-bg-dark">
-    <img src="images/bromo-header-2.avif" class="card-img" alt="...">
+    <img src="{{asset('images/bromo-header-2.avif')}}" class="card-img" alt="...">
     <div class="card-img-overlay">
 
         <div class="container">
@@ -50,7 +50,7 @@
                 <div class="col">
                     <div class="card h-100">
                         <div class="img-hover-zoom">
-                            <a href="{{ url('show' , $data->id) }}">
+                            <a href="{{ url('wisatas/jawa/show' , $data->id) }}">
                                 <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
                                     class="card-img-top" alt="...">
                             </a>

@@ -62,7 +62,7 @@ class LokasiController extends Controller
         return view('lokasi.show', compact('lokasi'));
     }
 
-    /**
+    /** 
      * Show the form for editing the specified resource.
      *
      * @param  int  $id

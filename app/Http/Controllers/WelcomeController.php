@@ -8,8 +8,8 @@ use App\Models\wisata;
 class WelcomeController extends Controller
 {
     public function menampilkan(){
-        $welcome = Wisata::all();
-        return view('welcome',compact('welcome'));
+        $wisata = Wisata::all();
+        return view('welcome',compact('wisata'));
     }
 
     // public function show($id){

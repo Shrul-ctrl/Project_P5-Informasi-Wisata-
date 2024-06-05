@@ -88,6 +88,138 @@
 
     </div>
 </div>
+
+<div class="content-6">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="section-heading">
+                    <h2 class="display-6">WISATA POPULER</h2>
+                    <h6>Jelajahi Provinsi Jawa tengah dengan destinasi wisata populer</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="men-item-carousel">
+                    <div class="owl-men-item owl-carousel">
+                        @foreach ( $wisata as $data)
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="{{ url('/show' , $data->id) }}">
+                                    <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
+                                        class="card-img-top" alt="...">
+                                </a>
+                            </div>
+                            <div class="down-content">
+                                <h4>{{$data->nama_wisata}}</h4>
+                                <span>Tiket masuk 200rb</span>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{-- rhea template --}}
+<div class="container">
+    <div class="row mb-5">
+        <div class="text-center">
+            <h1 class="display-6">VIEDO INDONESIA</h1>
+            <hr class="mx-auto border-danger border-4 opacity-100 my-4" style="width:150px;" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="carousel slide" id="carouselExampleIndicators" data-bs-touch="false" data-bs-interval="false">
+                <div class="row align-items-center">
+                    <div class="col-12 col-xxl-7 px-2">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active h-100">
+                                <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/zLeLttVbFs8') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/xf86EzuLXu0') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 col-xxl-2 pt-3 pt-md-0">
+                        <div class="carousel-indicators">
+                            <div class="row h-100 w-100">
+                                <div class="video col-12 px-1">
+                                    <button class="active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"><img class="d-block" src="{{ asset('images/maldives-v.png') }}" alt="..." /></button>
+                                </div>
+                                <div class="video col-12 px-1">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img class="d-block" src="{{ asset('images/tanzania.png') }}" alt="..." /></button>
+                                </div>
+                                <div class="video col-12 px-1">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img class="d-block" src="{{ asset('images/kathmandu-v.png') }}" alt="..." /></button>
+                                </div>
+                                <div class="video col-12 px-1">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img class="d-block" src="{{ asset('images/chaina.png') }}" alt="..." /></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 px-xxl-0">
+                        <div class="row">
+                            <div class="gambar">
+                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                    <div class="card-body">
+                                        <p> When go to maldives</p>
+                                        <p class="card-text">0.20</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gambar">
+                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                    <div class="card-body">
+                                        <p>Tanzania’s deadly pink lake</p>
+                                        <p class="card-text">05.24</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gambar">
+                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                    <div class="card-body">
+                                        <p> Top things to do in Kathmandu</p>
+                                        <p class="card-text">06.12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gambar">
+                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                    <div class="card-body">
+                                        <p> Exploring China’s creative capital</p>
+                                        <p class="card-text">0.20 </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {{--
     <div class="container">
         <div class="content-4">

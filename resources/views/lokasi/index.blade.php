@@ -40,7 +40,6 @@
                                         <th>Aksi</th>
                                         <th>No</th>
                                         <th>Nama Lokasi</th>
-                                        <th>Alamat Lengkap</th>
                                         <th>Provinsi</th>
                                         <th>Kabupaten</th>
                                         
@@ -78,7 +77,6 @@
                                         </form>
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama_lokasi }}</td>
-                                        <td>{{ $data->alamat_lengkap }}</td>
                                         <td>{{ $data->provinsi }}</td>
                                         <td>{{ $data->kabupaten }}</td>
 

@@ -40,11 +40,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Nama Tempat</label>
-                            <input class="form-control  mb-3" type="text" name="id_lokasi" value="{{ $event->lokasi->nama_lokasi }}" disabled>
-                        </div>
-
-                        <div class="form-group">
                             <label class="form-label">Status</label>
                             <input class="form-control  mb-3" type="text" name="status" value="{{ $event->status }}" disabled>
                         </div>

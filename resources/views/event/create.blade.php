@@ -39,14 +39,6 @@
                             <input class="form-control  mb-3" type="date" name="tanggal" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Nama Tempat</label>
-                            <select class="form-control" name="id_lokasi">
-                                @foreach ($lokasi as $data)
-                                <option value="{{ $data->id }}">{{ $data->nama_lokasi }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-group">
                             <label class="form-label">Status</label>
                             <select class="form-control mb-3" name="status" placeholder="Status">
                                 <option>Belum mulai </option>

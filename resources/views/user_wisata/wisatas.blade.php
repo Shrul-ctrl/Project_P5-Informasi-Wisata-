@@ -19,7 +19,7 @@
 
             <div class="font">
                 <h2 class=" display-5 text-light text-center">DESTINASI WISATA</h2>
-                <p class=" display-5 text-light text-center">Nikmati Keindahan Alam DiIndonesia</p>
+                <p class=" display-5 text-light text-center">Nikmati Keindahan Alam DI JAWA TENGAH</p>
 
 
 
@@ -43,30 +43,30 @@
         </div>
 
         <div class="judul">
-            <h1 class="a">Apa yang menjadikan negara ini tempat yang indah untuk dikunjungi.</h1>
-            <p>Bersinggah di berbagai tempat di Indonesia menjadikan negara ini tempat yang indah untuk dikunjungi.
+            <h1 class="a">Apa yang menjadikan Jawa Tengah ini tempat yang indah untuk dikunjungi.</h1>
+            <p>Bersinggah di berbagai tempat di Jawa Tengah menjadikan tempat yang indah untuk dikunjungi.
                 Keindahan pemandangan alam yang indah berpadu dengan berbagai keunikan budaya masyarakatnya. Nikmati
                 pantai-pantai yang belum terjamah, gunung-gunung, danau-danau, dan masih banyak lagi destinasi menarik
                 lainnya serta pemandangan kota-kota yang indah di seluruh negeri. Dan ketika Anda memutuskan untuk
-                melihat semuanya, kunjungan saja tidak akan cukup untuk menikmati keajaiban Indonesia.</p>
+                melihat semuanya, kunjungan saja tidak akan cukup untuk menikmati keajaiban Jawa Tengah.</p>
             <hr class="border-dark border-2 ">
-            <h1 class="b">Jelajahi Berbagai Wisata diIndonesia sesuai kategori</h1>
+            <h1 class="b">Jelajahi Berbagai Wisata diJawa Tengah</h1>
         
      
             
       
         <div class="row row-cols-1 row-cols-md-3 g-4">
-               @foreach ($kategori as $data )
+               @foreach ($wisata as $data )
             <div class="col">
                 <div class="card h-100">
                     <div class="img-hover-zoom">
-                        <a href="{{ url('wisatas/sumatera/show' , $data->id) }}">
-                            <img src="{{ asset('images/kategori/' . $data->gambar) }}" alt=""
+                        <a href="{{ url('show' , $data->id) }}">
+                            <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
                                 class="card-img-top" alt="...">
                         </a>
                     </div>
                     <div class="card-body text-center">
-                        <h5 class="card-title">{{$data->kategori}}</h5>
+                        <h5 class="card-title">{{$data->nama_wisata}}</h5>
                     </div>
                 </div>
             </div>

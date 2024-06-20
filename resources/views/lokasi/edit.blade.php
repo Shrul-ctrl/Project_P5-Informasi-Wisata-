@@ -33,22 +33,17 @@
                         @method('PUT')
                         <div class="form-group">
                             <label class="form-label">Nama Lokasi</label>
-                            <input class="form-control  mb-3" type="text" name="nama_lokasi" value="{{ $lokasi->nama_lokasi }}">
-                        </div>
-
-                        <div class="form-group">
-                            <label class="form-label">Alamat Lengkap</label>
-                            <input class="form-control  mb-3" type="text" name="alamat_lengkap" value="{{ $lokasi->alamat_lengkap }}">
+                            <input class="form-control  mb-3" type="text" name="nama_lokasi" value="{{ $lokasi->nama_lokasi }}" required>
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Provinsi</label>
-                            <input class="form-control  mb-3" type="text" name="provinsi" value="{{ $lokasi->provinsi }}">
+                            <input class="form-control  mb-3" type="text" name="provinsi" value="{{ $lokasi->provinsi }}" required>
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Kabupaten</label>
-                            <input class="form-control  mb-3" type="text" name="kabupaten" value="{{ $lokasi->kabupaten }}">
+                            <input class="form-control  mb-3" type="text" name="kabupaten" value="{{ $lokasi->kabupaten }}" required>
                         </div>
 
 

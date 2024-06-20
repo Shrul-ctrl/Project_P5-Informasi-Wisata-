@@ -35,7 +35,7 @@
                     </div>
                     <div class="form-group">
                         <label class="form-label">Cover</label>
-                        <img class="" name="cover"src="{{ asset('images/wisata/' . $wisata->cover) }}" width="300" alt="">    
+                        <img class="" name="gambar"src="{{ asset('images/kategori/' . $kategori->gambar) }}" width="300" alt="">    
                     </div>
 
                     <div class="from-group">

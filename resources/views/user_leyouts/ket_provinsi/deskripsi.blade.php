@@ -3,12 +3,7 @@
     <ul class="list cat-list">
         <li>
             <a href="#sejarah" class="d-flex">
-                <p>Sejarah</p>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="d-flex">
-                <p>Kuliner</p>
+                <p>Penjelasan</p>
             </a>
         </li>
         <li>
@@ -17,8 +12,8 @@
             </a>
         </li>
         <li>
-            <a href="#galeri" class="d-flex">
-                <p>Galeri</p>
+            <a href="#kategori" class="d-flex">
+                <p>Kategori</p>
             </a>
         </li>
     </ul>

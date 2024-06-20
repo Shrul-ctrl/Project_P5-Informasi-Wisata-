@@ -33,13 +33,13 @@
                         @method('PUT')
                     <div class="form-group">
                         <label class="form-label">Kategori</label>
-                        <input class="form-control  mb-3" type="text" name="kategori" value="{{ $kategori->kategori }}">
+                        <input class="form-control  mb-3" type="text" name="kategori" value="{{ $kategori->kategori }}" required>
                     </div>
 
                     <div class="form-group">
                         <label class="form-label">Gambar</label>
                         <img src="{{ asset('images/kategori/' . $kategori->gambar) }}" width="300" alt="">
-                        <input type="file" class="form-control" name="gambar">
+                        <input type="file" class="form-control" name="gambar" required>
                     </div>
 
                     <div class="from-group">

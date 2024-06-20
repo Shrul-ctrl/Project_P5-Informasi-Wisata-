@@ -32,11 +32,11 @@
                         @csrf
                     <div class="form-group">
                         <label class="form-label">Kategori</label>
-                        <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori">
+                        <input class="form-control  mb-3" type="text" name="kategori" placeholder="Kategori" required>
                     </div>
                      <div class="form-group">
                         <label class="form-label">Gambar</label>
-                        <input type="file" class="form-control" name="gambar">
+                        <input type="file" class="form-control" name="gambar" required>
                     </div>
 
                     <div class="from-group">

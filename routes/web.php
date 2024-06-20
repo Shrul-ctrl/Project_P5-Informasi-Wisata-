@@ -13,6 +13,7 @@ use App\Http\Controllers\SumateraController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\WisataController;
 use App\Http\Controllers\WisatasController;
+use App\Http\Controllers\WisatassController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,10 +33,11 @@ Route::get('',[WelcomeController::class,'menampilkan'] );
 // Route::get('/{id}',[WelcomeController::class,'show']);
 
 Route::get('wisatas',[WisatasController::class,'menampilkan'] );
-// Route::get('kategori/{id}',[WisatasController::class,'show'] );
+Route::get('show/{id}',[WisatassController::class,'show'] );    
+
+// Route::get('wisatas/show/{id}',[WisatasController::class,'show'] );
 
 // Route::get('wisatas/jawa',[JawaController::class,'menampilkan'] );
-// Route::get('wisatas/jawa/show/{id}',[JawaController::class,'show'] );
 
 // Route::get('wisatas/bali',[BaliController::class,'menampilkan'] );
 // Route::get('wisatas/bali/show/{id}',[BaliController::class,'show'] );

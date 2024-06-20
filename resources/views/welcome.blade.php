@@ -20,8 +20,8 @@
             </div>
 
             <div class="font">
-                <h1 class=" display-1 text-light">VISIT </h1>
-                <h1 class=" display-1 text-light"> INDONESIA</h1>
+                <h1 class=" display-1 text-light">JAWA </h1>
+                <h1 class=" display-1 text-light">TENGAH</h1>
                 <a href="{{ url('/wisatas') }}" class="btn btn-outline-light stretched-link text-light">Baca
                     Selengakpnya <i? class="fa-solid fa-arrow-right"></i></a>
             </div>
@@ -65,25 +65,23 @@
     <div class="clearfix shadow-lg">
         <img src="images/slider-4.jpg" class="col-md-6 float-md-start pt-4" alt="...">
         <div class="content-2 pt-4" align="center">
-            <h1 class="font col-12 display-6">TENTANG </h1>
-            <h2 class="font col-12 display-6"> INDONESIA</h2>
+            <h1 class="font col-12 display-6">JAWA </h1>
+            <h2 class="font col-12 display-6"> TENGAH</h2>
         </div>
 
         <p class="m-4">
-            Indonesia adalah negara kepulauan terbesar di dunia. Indonesia memiliki lebih dari 17.000 pulau, di mana
-            hanya sekitar 7.000 pulau yang berpenghuni. Kalimantan, Jawa, Sulawesi, Sumatra dan Papua merupakan pulau
-            utama di Indonesia. Selain itu Indonesia juga memiliki pulau-pulau kecil seperti Bali, Karimunjawa, Gili dan
-            Lombok yang merupakan tujuan wisata lokal maupun internasional. Ibukota negara Indonesia adalah Jakarta,
-            yang terletak di Pulau Jawa.
+            Provinsi Jawa Tengah (disingkat Jateng, bahasa Jawa: ꦗꦮꦶꦩꦢꦾ, Pegon: جاوي مـديا, translit. Jawi Madya) adalah
+            sebuah wilayah provinsi di Indonesia yang terletak di bagian tengah Pulau Jawa. Ibu kota Provinsi Jawa
+            Tengah berada di Kota Semarang. Provinsi ini berbatasan dengan Provinsi Jawa Barat di sebelah barat, Samudra
+            Hindia beserta Daerah Istimewa Yogyakarta di sebelah selatan, Provinsi Jawa Timur di sebelah timur dan Laut
+            Jawa di sebelah utara. Luas total wilayahnya 32.800,69 km², atau sekitar 28,94% dari luas pulau Jawa.
+            Provinsi Jawa Tengah juga meliputi Pulau Nusakambangan di sebelah selatan (dekat dengan perbatasan Jawa
+            Barat), serta Kepulauan Karimun Jawa di Laut Jawa. Penduduk Provinsi Jawa Tengah berdasarkan Badan Pusat
+            Statistik tahun 2021 berjumlah 37.516.035 jiwa dengan kepadatan 1.123,00 jiwa/km²
         </p>
 
         <p class="m-4">
-            Dilihat dari segi geografis, kepulauan Indonesia terletak antara 5° 54′ 08″ bujur utara hingga 11° 08′ 20″
-            bujur selatan dan 95°00'38“ sampai 141°01'12“ bujur timur. Beberapa pulau terletak di garis ekuator. Karena
-            itu, siang dan malam memiliki waktu yang hampir sama, yaitu 12 jam. Atas dasar letak geografis yang luas,
-            wilayah Indonesia dibagi menjadi 3 zona waktu yaitu WIB (Waktu Indonesia Barat), WITA (Waktu Indonesia
-            Tengah) dan WIT (Waktu Indonesia Timur). Dari satu pulau ke pulau lainnya dapat terjadi perbedaan waktu
-            hingga 8 jam.
+
         </p>
 
     </div>
@@ -105,19 +103,19 @@
             <div class="col-lg-12">
                 <div class="men-item-carousel">
                     <div class="owl-men-item owl-carousel">
-                        @foreach ( $wisata as $data)
-                        <div class="item">
-                            <div class="thumb">
-                                <a href="{{ url('/show' , $data->id) }}">
-                                    <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
-                                        class="card-img-top" alt="...">
-                                </a>
+                        @foreach ($wisata as $data)
+                            <div class="item">
+                                <div class="thumb">
+                                    <a href="{{ url('/show', $data->id) }}">
+                                        <img src="{{ asset('images/wisata/' . $data->cover) }}" alt=""
+                                            class="card-img-top" alt="...">
+                                    </a>
+                                </div>
+                                <div class="down-content">
+                                    <h4>{{ $data->nama_wisata }}</h4>
+                                    {{-- <span>Tiket masuk 200rb</span> --}}
+                                </div>
                             </div>
-                            <div class="down-content">
-                                <h4>{{$data->nama_wisata}}</h4>
-                                <span>Tiket masuk 200rb</span>
-                            </div>
-                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -129,7 +127,7 @@
 <div class="container">
     <div class="row mb-5">
         <div class="text-center">
-            <h1 class="display-6">VIEDO INDONESIA</h1>
+            <h1 class="display-6">SEPUTAR VIEDO JAWA TENGAH</h1>
             <hr class="mx-auto border-danger border-4 opacity-100 my-4" style="width:150px;" />
         </div>
     </div>
@@ -141,22 +139,30 @@
                         <div class="carousel-inner">
                             <div class="carousel-item active h-100">
                                 <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
-                                    <iframe src="{{ asset('https://www.youtube.com/embed/zLeLttVbFs8') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/zLeLttVbFs8') }}"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
-                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
-                                    <iframe src="{{ asset('https://www.youtube.com/embed/xf86EzuLXu0') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/xf86EzuLXu0') }}"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen=""></iframe>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <div class="player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
-                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                                    <iframe src="{{ asset('https://www.youtube.com/embed/YkEd_aorIiI') }}"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen=""></iframe>
                                 </div>
                             </div>
                         </div>
@@ -165,16 +171,25 @@
                         <div class="carousel-indicators">
                             <div class="row h-100 w-100">
                                 <div class="video col-12 px-1">
-                                    <button class="active" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"><img class="d-block" src="{{ asset('images/maldives-v.png') }}" alt="..." /></button>
+                                    <button class="active" type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"><img
+                                            class="d-block" src="{{ asset('images/maldives-v.png') }}"
+                                            alt="..." /></button>
                                 </div>
                                 <div class="video col-12 px-1">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"><img class="d-block" src="{{ asset('images/tanzania.png') }}" alt="..." /></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"><img class="d-block"
+                                            src="{{ asset('images/tanzania.png') }}" alt="..." /></button>
                                 </div>
                                 <div class="video col-12 px-1">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"><img class="d-block" src="{{ asset('images/kathmandu-v.png') }}" alt="..." /></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"><img class="d-block"
+                                            src="{{ asset('images/kathmandu-v.png') }}" alt="..." /></button>
                                 </div>
                                 <div class="video col-12 px-1">
-                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"><img class="d-block" src="{{ asset('images/chaina.png') }}" alt="..." /></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="3" aria-label="Slide 4"><img class="d-block"
+                                            src="{{ asset('images/chaina.png') }}" alt="..." /></button>
                                 </div>
                             </div>
                         </div>
@@ -182,33 +197,33 @@
                     <div class="col-6 col-lg-3 px-xxl-0">
                         <div class="row">
                             <div class="gambar">
-                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                <div class="card border-0 shadow-none h-100 ">
                                     <div class="card-body">
-                                        <p> When go to maldives</p>
+                                        <p> Pemandangan Jawa Tengah</p>
                                         <p class="card-text">0.20</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="gambar">
-                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                <div class="card border-0 shadow-none h-100 ">
                                     <div class="card-body">
-                                        <p>Tanzania’s deadly pink lake</p>
+                                        <p>keragaman Jawa Tengah</p>
                                         <p class="card-text">05.24</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="gambar">
-                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                <div class="card border-0 shadow-none h-100 ">
                                     <div class="card-body">
-                                        <p> Top things to do in Kathmandu</p>
+                                        <p>gunuung di Jawa tengah</p>
                                         <p class="card-text">06.12</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="gambar">
-                                <div class="card border-0 shadow-none h-100 py-md-2">
+                                <div class="card border-0 shadow-none h-100 ">
                                     <div class="card-body">
-                                        <p> Exploring China’s creative capital</p>
+                                        <p>Wisata Di Jawa Tengah</p>
                                         <p class="card-text">0.20 </p>
                                     </div>
                                 </div>

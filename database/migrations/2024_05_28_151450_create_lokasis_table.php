@@ -15,8 +15,7 @@ return new class extends Migration
     {
         Schema::create('lokasis', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_lokasi');
-            $table->string('alamat_lengkap');
+            $table->string('nama_lokasi')->unique();
             $table->string('provinsi');
             $table->string('kabupaten');
             $table->timestamps();

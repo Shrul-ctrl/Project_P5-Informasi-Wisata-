@@ -35,11 +35,6 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label">Alamat Lengkap</label>
-                            <input class="form-control  mb-3" type="text" name="alamat_lengkap" value="{{ $lokasi->alamat_lengkap }}" disabled>
-                        </div>
-
-                        <div class="form-group">
                             <label class="form-label">Provinsi</label>
                             <input class="form-control  mb-3" type="text" name="provinsi" value="{{ $lokasi->provinsi }}" disabled>
                         </div>

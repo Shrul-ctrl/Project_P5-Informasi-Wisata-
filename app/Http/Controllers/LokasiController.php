@@ -43,7 +43,6 @@ class LokasiController extends Controller
     {
         $lokasi = new lokasi;
         $lokasi->nama_lokasi = $request->nama_lokasi;
-        $lokasi->alamat_lengkap = $request->alamat_lengkap;
         $lokasi->provinsi = $request->provinsi;
         $lokasi->kabupaten = $request->kabupaten;
         $lokasi->save();
@@ -85,7 +84,6 @@ class LokasiController extends Controller
     {
         $lokasi = lokasi::findOrFail($id);
         $lokasi->nama_lokasi = $request->nama_lokasi;
-        $lokasi->alamat_lengkap = $request->alamat_lengkap;
         $lokasi->provinsi = $request->provinsi;
         $lokasi->kabupaten = $request->kabupaten;
         $lokasi->save();

@@ -32,19 +32,15 @@
                         @csrf
                         <div class="form-group">
                             <label class="form-label">Nama Lokasi</label>
-                            <input class="form-control  mb-3" type="text" name="nama_lokasi" placeholder="Nama Lokasi">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label">Alamat Lengkap</label>
-                            <input class="form-control  mb-3" type="text" name="alamat_lengkap" placeholder="Alamat Lengkap">
+                            <input class="form-control  mb-3" type="text" name="nama_lokasi" placeholder="Nama Lokasi" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Provinsi</label>
-                            <input class="form-control  mb-3" type="text" name="provinsi" placeholder="Provinsi">
+                            <input class="form-control  mb-3" type="text" name="provinsi" placeholder="Provinsi" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Kabupaten</label>
-                            <input class="form-control  mb-3" type="text" name="kabupaten" placeholder="Kabupaten">
+                            <input class="form-control  mb-3" type="text" name="kabupaten" placeholder="Kabupaten" required>
                         </div>
                         <div class="from-group">
                             <a href="{{ url('lokasi') }}" class="btn btn-sm btn-outline-secondary">Cancle</a>

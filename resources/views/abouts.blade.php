@@ -19,8 +19,7 @@
 
             <div class="font">
                 <h2 class=" display-5 text-light text-center">TENTANG KAMI</h2>
-                <p class=" display-5 text-light text-center">Selamat Datang di<span class="text-danger"> Wisata</span>
-                    Nusantara</p>
+                <p class=" display-5 text-light text-center">Selamat Datang diEksplorasiJawaTengah.com
             </div>
         </div>
     </div>
@@ -33,11 +32,11 @@
 
         <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="{{ url('/') }}">Beranda</a></li>
-            <li class="breadcrumb-item">Wisata</li>
+            <li class="breadcrumb-item">Tentang Kami</li>
             {{-- <li class="breadcrumb-item active" aria-current="page">Kategori</li> --}}
         </ol>
     </div>
-    <div class="content-2">
+    <div class="content-7">
         
         <section class="ftco-section services-section">
             <div class="container">
@@ -46,7 +45,7 @@
                     <div class="col-md-6 order-md-last heading-section pl-md-4 d-flex align-items-center">
                         <div class="w-100">
                             
-                            <h2 class="mb-4">Apa itu <span class="text-danger">Wisata</span> Nusantara?</h2>
+                            <h2 class="mb-4">apa itu Eksplorasi JawaTengah.com?</h2>
                             <p>Selamat datang di dunia wisata yang penuh dengan keajaiban alam dan kekayaan budaya! Kami
                                 hadir untuk membantu Anda dalam perjalanan tak terlupakan melintasi
                                 destinasi-destinasi menakjubkan di seluruh penjuru dunia. Dari puncak gunung yang

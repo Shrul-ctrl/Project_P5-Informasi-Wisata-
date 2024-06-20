@@ -41,7 +41,6 @@
                                         <th>No</th>
                                         <th>Event</th>
                                         <th class="long-1">Tanggal diselengarakan</th>
-                                        <th class="long-1">Nama Tempat</th>
                                         <th>status</th>
                                         <th>Gambar</th>
                                     </tr>
@@ -79,7 +78,6 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nama_event }}</td>
                                         <td>{{ $data->tanggal }}</td>
-                                        <td>{{ $data->lokasi->nama_lokasi }}</td>
                                         <td>{{ $data->status}}</td>
                                         <td>
                                             <img src="{{ asset('images/event/' . $data->foto) }}" width="100"

@@ -46,7 +46,6 @@ class EventController extends Controller
         $event = new Event;
         $event->nama_event = $request->nama_event;
         $event->tanggal = $request->tanggal;
-        $event->id_lokasi = $request->id_lokasi;
         $event->status = $request->status;
         $event->foto = $request->foto;
 
@@ -99,7 +98,6 @@ class EventController extends Controller
         $event = Event::findOrFail($id);
         $event->nama_event = $request->nama_event;
         $event->tanggal = $request->tanggal;
-        $event->id_lokasi = $request->id_lokasi;
         $event->status = $request->status;
         $event->foto = $request->foto;
 

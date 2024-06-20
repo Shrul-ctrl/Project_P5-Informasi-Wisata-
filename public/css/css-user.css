@@ -12,6 +12,7 @@
 .judul .a{
     font-size: 60px;
     font-weight: bold;
+    color: red;
 }
 
 .judul .b {
@@ -28,7 +29,7 @@
     font-size: 120px;
     position: relative;
     top: 4rem;
-    margin-bottom: -45px;
+    margin-bottom: -35px;
 }
 
 .font h2 {
@@ -136,6 +137,10 @@
     margin-bottom: 100px;
 }
 
+.content-7{
+    margin-top: -100px;
+}
+
 .breadcrumb{
     background-color: white;
 }
@@ -144,6 +149,8 @@ footer {
     margin-top:6rem;
     color: white;
     padding: 6px;
+    padding-top: 20px;
+    padding-bottom: 3-px;
 }
 
 footer p{
@@ -169,6 +176,12 @@ footer p{
     object-fit: cover;
     width: 250px;
     height: 300px;
+}
+
+.gambar{
+    margin: 8px;
+    margin-left: -10px;
+    
 }
 
 /* template */
